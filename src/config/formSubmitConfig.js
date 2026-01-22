@@ -1,11 +1,11 @@
 /**
  * Configuration for Form Submit API
- * Add your API code value below
+ * API_CODE is read from environment variable REACT_APP_FORM_SUBMIT_API_CODE
  */
 export const FORM_SUBMIT_CONFIG = {
   BASE_URL: 'https://auth-uat-api.azurewebsites.net',
   ENDPOINT: '/api/postJanamFormData',
-  API_CODE: '' // <-- Add your code= value here
+  API_CODE: process.env.codeform || ''
 };
 
 /**
@@ -19,12 +19,12 @@ export const getFormSubmitUrl = () => {
 
 /**
  * Configuration for Excel Upload API
- * Add your API code value below
+ * API_CODE is read from environment variable REACT_APP_EXCEL_UPLOAD_API_CODE
  */
 export const EXCEL_UPLOAD_CONFIG = {
   BASE_URL: 'https://auth-uat-api.azurewebsites.net',
   ENDPOINT: '/api/UploadMedia',
-  API_CODE: '' // <-- Add your code= value here
+  API_CODE: process.env.codeexcel || ''
 };
 
 /**
